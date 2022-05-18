@@ -1,0 +1,25 @@
+ObjetConnecter:idObjet
+ObjetDe,1N ObjetConnecter, 1N Membres
+Membres:idMembre[COUNTER], nomMembre, prenomMembre, emailMembre, phoneMembre[INT]
+Habiter,1N Membres, 0N Domiciles
+Domiciles:idDomicile[COUNTER], addreseDomicile
+
+AjoutObjet,11> Co_Proprietaire, 1N ObjetConnecter
+:
+Co_Proprietaire:isCoProprietaire[BOOLEAN]
+CreePieces,0N Co_Proprietaire,0N Domiciles,1N Pieces
+
+:
+:
+Proprietaire:isProprietaire[BOOLEAN]
+:
+Appartient,1N Proprietaire,0N Domiciles
+
+:
+Dans,1N AjoutObjet,1N Pieces
+:
+Pieces:idPiece[COUNTER],
+
+/\ Membres - Co_Proprietaire 
+/\ Co_Proprietaire- Proprietaire 
+
