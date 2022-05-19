@@ -4,7 +4,7 @@
 
 
 
-# 1 Analyse de la diagramme des cas utilistion
+# 1 Analyse de la diagramme des cas utilisation
 
 <img src="./assets/img/Jarvis_usecase.png">
 
@@ -58,3 +58,29 @@ Elle sont Marqué dans la section 1.2
 
 # 2 MCD 
 <img src="./assets/img/Jarvis_mcd.png">
+
+## 2.1 Liste des Entintés et leurs propriété respéctives
+
+* Membre
+* Co-proprietaire
+* ProPrietaire
+* ObjetConnecter
+* Abonnement
+* Carte
+* Piece
+* Domicile
+
+
+## 2.2 Les associations entre divers Entités
+
+* **Membre** :
+	* _Habiter_ dans un **Domicile**
+	* _Avoir_ un **ObjetConnecter**
+* **Co-Proprietaire** :
+	* _Cree_ **Piece** dans un *Domicile*
+	* _AjouterObjetConncter_ dans une **Piece**
+
+* **Proprietaire**:
+	* _Propritaire_ (Appartien) d'un **Domicile**
+	* _Abonner_ a un **Abonnement**
+	* _Avoir_(carte de) **Carte**
