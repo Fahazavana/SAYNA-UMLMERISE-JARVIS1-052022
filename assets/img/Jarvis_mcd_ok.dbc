@@ -1,0 +1,21 @@
+:
+Utilisateurs :idUtilisateur[COUNTER],nomUtilisateur,prenomUtilisateur,dNaissUtilisateur,emailUtilisateur,telUtilisateur
+:
+Habiter, 1N Utilisateurs, 1N Domiciles
+
+
+Membres:idMembre[COUNTER]
+CoProprietaires:idCoproprietaire[COUNTER]
+Proprietaires:idProprietaire[COUNTER]
+
+:
+:
+Appartient, 1N  Proprietaires, 11 Domiciles
+Domiciles:idDomicile[COUNTER],addresseDomicile
+
+Appareils:idAppareil[COUNTER],nomAppareil,typeAppareil
+SeTrouver,11 Appareils,1N Pieces
+Pieces:idPiece[COUNTER]
+Contenu,11 Pieces,1N Domiciles
+
+/X\ Utilisateurs - Membres,CoProprietaires, Proprietaires

@@ -57,10 +57,19 @@
 Elle sont Marqué dans la section 1.2
 
 # 2 MCD 
-<img src="./assets/img/Jarvis_mcd.png">
+<img src="./assets/img/Jarvis_mcd_ok.png">
 
 ## 2.1 Liste des Entintés et leurs propriété respéctives
+* Ulilisateurs
+* Membres
+* Co-Proprietaires
+* Proprietaires
+* Domiciles
+* Pieces
+* Appareils
 
+
+<!--
 * Membre
 * Co-proprietaire
 * ProPrietaire
@@ -69,10 +78,23 @@ Elle sont Marqué dans la section 1.2
 * Carte
 * Piece
 * Domicile
-
-
+-->
 ## 2.2 Les associations entre divers Entités
+* **Utilisateur** :
+	* _Habiter_ au moins dans un **Domicile**
+	* _Peut être_ un **Membre** ou **CoProprietaire** ou **Propriétaire** (Exclisive) ou **Autre**
 
+* **Proprietaires**:
+	* _Possede_ un **Domiciles**
+
+* **Pieces** :
+	* _Contenu_ dans un **Domiciles**
+
+* **Appareil** :
+	* _SeTrouve_ dans une **Piece**
+
+
+<!--
 * **Membre** :
 	* _Habiter_ dans un **Domicile**
 	* _Avoir_ un **ObjetConnecter**
@@ -81,6 +103,27 @@ Elle sont Marqué dans la section 1.2
 	* _AjouterObjetConncter_ dans une **Piece**
 
 * **Proprietaire**:
-	* _Propritaire_ (Appartien) d'un **Domicile**
+	* _Proprietaire_ (Appartien) d'un **Domicile**
 	* _Abonner_ a un **Abonnement**
-	* _Avoir_(carte de) **Carte**
+	* _Possede_(carte de) au moins une **Carte**
+-->
+## 2.3 MLD
+
+	Utilisateurs (idUtilisateur, nomUtilisateur, prenomUtilisateur, dNaissUtilisateur, emailUtilisateur, telUtilisateur)
+
+	Membres (#idUtilisateur, idMembre)
+
+	CoProprietaires (#idUtilisateur, idCoproprietaire)
+
+	Proprietaires (#idUtilisateur, idProprietaire)
+
+	Domiciles (idDomicile, addresseDomicile, #idUtilisateur)
+
+	Appareils (idAppareil, nomAppareil, typeAppareil, #idPiece)
+
+	Pieces (idPiece, #idDomicile)
+
+	Habiter (#idUtilisateur, #idDomicile)
+
+## 2.4 MPD
+<img src="./assets/img/Jarvis_mpd_ok.png">
