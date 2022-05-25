@@ -1,5 +1,5 @@
 :
-Utilisateurs :idUtilisateur[COUNTER],nomUtilisateur,prenomUtilisateur,dNaissUtilisateur,emailUtilisateur,telUtilisateur
+Utilisateurs :idUtilisateur[COUNTER],nomUtilisateur,prenomUtilisateur,dNaissUtilisateur[DATE],emailUtilisateur,telUtilisateur
 :
 Habiter, 1N Utilisateurs, 1N Domiciles
 
